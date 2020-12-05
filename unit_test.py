@@ -67,3 +67,23 @@ class Test(TestCase):
                  'edges': edges}
 
         print(dijkstra_shortest_path(graph, 'A'))
+
+    def test_shortest_path_4(self):
+        edges = [('A', 'B', 1.0)]
+
+        vertices = deduce_vertices_from_edges(edges)
+
+        graph = {'vertices': vertices,
+                 'edges': edges}
+
+        print(dijkstra_shortest_path(graph, 'A'))
+
+    def test_empty_graph(self):
+        edges = []
+
+        vertices = deduce_vertices_from_edges(edges)
+
+        graph = {'vertices': vertices,
+                 'edges': edges}
+
+        print(dijkstra_shortest_path(graph, 'A'))
